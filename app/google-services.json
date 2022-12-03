@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "370236611179",
+    "project_id": "halobundo",
+    "storage_bucket": "halobundo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370236611179:android:e898e9a6cb919b17c2af2e",
+        "android_client_info": {
+          "package_name": "com.example.halobundo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370236611179-6fn673rrqoo1d4iforh71t8k1lg7d8gg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADEu5-5emVYOEy40l5YjSt_pN0kquCCaA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370236611179-6fn673rrqoo1d4iforh71t8k1lg7d8gg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

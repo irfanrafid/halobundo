@@ -1,6 +1,16 @@
-package com.example.halobundo;
+package com.example.halobundo
 
-import android.app.Activity;
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.database.FirebaseDatabase
 
-public class MainActivity extends Activity {
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+
+
+    }
 }

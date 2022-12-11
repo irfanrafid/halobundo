@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "370236611179",
-    "project_id": "halobundo",
-    "storage_bucket": "halobundo.appspot.com"
+    "project_number": "872517335034",
+    "project_id": "halo-bundo",
+    "storage_bucket": "halo-bundo.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:370236611179:android:e898e9a6cb919b17c2af2e",
+        "mobilesdk_app_id": "1:872517335034:android:460b1fb0a5b343eb909643",
         "android_client_info": {
           "package_name": "com.example.halobundo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "370236611179-6fn673rrqoo1d4iforh71t8k1lg7d8gg.apps.googleusercontent.com",
+          "client_id": "872517335034-30r1k06g90iso02ic13smo1r4h4l51tr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.halobundo",
+            "certificate_hash": "b13e3af8d0a0c188211af0442da2da96feda6b27"
+          }
+        },
+        {
+          "client_id": "872517335034-q2n2jd7n50l75enrq7dfa0jblh89dkj2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyADEu5-5emVYOEy40l5YjSt_pN0kquCCaA"
+          "current_key": "AIzaSyA--plYGva-Nby1MH4GYmhKKSWK7quCcJk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "370236611179-6fn673rrqoo1d4iforh71t8k1lg7d8gg.apps.googleusercontent.com",
+              "client_id": "872517335034-q2n2jd7n50l75enrq7dfa0jblh89dkj2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

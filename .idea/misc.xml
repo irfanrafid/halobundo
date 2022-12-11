@@ -7,11 +7,12 @@
         <entry key="..\:/halobundo/app/src/main/res/layout/activity_challenge.xml" value="0.12092391304347826" />
         <entry key="..\:/halobundo/app/src/main/res/layout/activity_challenge_detail.xml" value="0.2" />
         <entry key="..\:/halobundo/app/src/main/res/layout/activity_detail_pesanan.xml" value="0.22" />
-        <entry key="..\:/halobundo/app/src/main/res/layout/activity_jadwal_baru.xml" value="0.22" />
+        <entry key="..\:/halobundo/app/src/main/res/layout/activity_jadwal_baru.xml" value="0.16" />
         <entry key="..\:/halobundo/app/src/main/res/layout/activity_kontrol_kehamilan.xml" value="0.15" />
         <entry key="..\:/halobundo/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
         <entry key="..\:/halobundo/app/src/main/res/layout/activity_signin.xml" value="0.16032608695652173" />
         <entry key="..\:/halobundo/app/src/main/res/layout/activity_signup.xml" value="0.14130434782608695" />
+        <entry key="..\:/halobundo/app/src/main/res/layout/activity_status_pembayaran.xml" value="0.18" />
         <entry key="..\:/halobundo/app/src/main/res/layout/activity_tips_kesehatan.xml" value="0.33" />
       </map>
     </option>

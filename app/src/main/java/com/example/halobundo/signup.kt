@@ -15,10 +15,10 @@ import com.google.firebase.database.*
 class signup : AppCompatActivity() {
 
     lateinit var bSignUp : Button
-    lateinit var sUsername : EditText
     lateinit var sPassword : EditText
     lateinit var sNama : EditText
     lateinit var sEmail : EditText
+    lateinit var sPhoneNumber : EditText
 
     lateinit var mDatabaseReference: DatabaseReference
     lateinit var mFirebaseInstance : FirebaseDatabase
@@ -36,62 +36,64 @@ class signup : AppCompatActivity() {
         mDatabaseReference = mFirebaseInstance.getReference("User")
 
         bSignUp = findViewById<Button>(R.id.BSignUp)
-        sUsername = findViewById<EditText>(R.id.Signusername)
         sPassword = findViewById<EditText>(R.id.Signpassword)
         sNama = findViewById<EditText>(R.id.Signnama)
         sEmail = findViewById<EditText>(R.id.Signemail)
+        sPhoneNumber = findViewById<EditText>(R.id.Signphone)
 
         bSignUp.setOnClickListener {
-            val usernameSign = sUsername.text.toString().trim()
             val passwordSign = sPassword.text.toString().trim()
             val namaSign = sNama.text.toString().trim()
             val emailSign = sEmail.text.toString().trim()
+            val phoneSign = sPhoneNumber.text.toString().trim()
 
-            if (usernameSign.isEmpty()){
-                sUsername.error = "Silahkan isi username anda"
-                sUsername.requestFocus()
+             if(namaSign.isEmpty()){
+                sNama.error = "Silahkan isi nama anda"
+                sNama.requestFocus()
+                return@setOnClickListener
+
+            }else if(emailSign.isEmpty()){
+                sEmail.error = "Silahkan isi email anda"
+                sEmail.requestFocus()
                 return@setOnClickListener
             }else if (passwordSign.isEmpty()){
                 sPassword.error = "Silahkan isi password anda"
                 sPassword.requestFocus()
                 return@setOnClickListener
-            }else if(namaSign.isEmpty()){
-                sNama.error = "Silahkan isi nama anda"
-                sNama.requestFocus()
-                return@setOnClickListener
-            }else if(emailSign.isEmpty()){
-                sEmail.error = "Silahkan isi email anda"
-                sEmail.requestFocus()
-                return@setOnClickListener
-            } else {
-                saveUsername(usernameSign,passwordSign,namaSign,emailSign)
+
+            }else if (phoneSign.isEmpty()) {
+                 sPhoneNumber.error = "Silahkan isi nomor hp anda"
+                 sPhoneNumber.requestFocus()
+                 return@setOnClickListener
+             }else  {
+                saveUsername(passwordSign,namaSign,emailSign, phoneSign)
             }
         }
     }
 
-    private fun saveUsername(usernameSign: String, passwordSign: String, namaSign: String, emailSign: String) {
+    private fun saveUsername(passwordSign: String, namaSign: String, emailSign: String, phoneNumber: String) {
         var user = User()
         user.email = emailSign
-        user.username = usernameSign
         user.name = namaSign
         user.password = passwordSign
+        user.mobileNumber = phoneNumber
 
-        if (usernameSign != null) {
-            checkingUsername(usernameSign, user)
+        if (namaSign != null) {
+            checkingUsername(namaSign, user)
         }
     }
 
-    private fun checkingUsername(usernameSign: String, data: User) {
-        mDatabaseReference.child(usernameSign).addValueEventListener(object : ValueEventListener{
+    private fun checkingUsername(emailSign: String, data: User) {
+        mDatabaseReference.child(emailSign).addValueEventListener(object : ValueEventListener{
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 var user = dataSnapshot.getValue(User::class.java)
                 if (user == null){
-                    mDatabaseReference.child(usernameSign).setValue(data)
-
-
+                    mDatabaseReference.child(emailSign).setValue(data)
 
                 } else {
-
+                    Toast.makeText(
+                        applicationContext, "User sudah digunakan",
+                        Toast.LENGTH_LONG).show()
                 }
             }
 

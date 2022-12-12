@@ -9,7 +9,7 @@ import kotlinx.android.parcel.Parcelize
 data class User (
     var id: String ?="",
     var name: String ?="",
-    var username: String ?="",
     var email: String ?="",
     var password:String ?="",
+    var mobileNumber: String ?=""
 ): Parcelable

@@ -10,4 +10,9 @@
     <color name="primaryBlue">#031E3E</color>
     <color name="secondaryBlue">#1B2764</color>
     <color name="green">#00BB5D</color>
+    <color name="gray">#D2CED7</color>
+    <color name="blueNight">#031E3E</color>
+    <color name="blueLight">#283F60</color>
+    <color name="darkBlue">#081C33</color>
+    <color name="blueMedium">#32507C</color>
 </resources>

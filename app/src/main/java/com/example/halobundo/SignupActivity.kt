@@ -12,11 +12,12 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.*
 
 
-class signup : AppCompatActivity() {
+class SignupActivity : AppCompatActivity() {
 
     lateinit var bSignUp : Button
     lateinit var sPassword : EditText
     lateinit var sNama : EditText
+    lateinit var sUsername : EditText
     lateinit var sEmail : EditText
     lateinit var sPhoneNumber : EditText
 
@@ -26,10 +27,6 @@ class signup : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
-
-        mFirebaseInstance = FirebaseDatabase.getInstance()
-        mDatabase = FirebaseDatabase.getInstance().getReference()
-        mDatabaseReference = mFirebaseInstance.getReference("User")
 
         mFirebaseInstance = FirebaseDatabase.getInstance()
         mDatabase = FirebaseDatabase.getInstance().getReference()
@@ -79,20 +76,27 @@ class signup : AppCompatActivity() {
         user.mobileNumber = phoneNumber
 
         if (namaSign != null) {
-            checkingUsername(namaSign, user)
+            checkingUsername(phoneNumber, user)
         }
     }
 
-    private fun checkingUsername(emailSign: String, data: User) {
-        mDatabaseReference.child(emailSign).addValueEventListener(object : ValueEventListener{
+    private fun checkingUsername(mobileNumber: String, data: User) {
+        mDatabaseReference.child(mobileNumber).addValueEventListener(object : ValueEventListener{
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 var user = dataSnapshot.getValue(User::class.java)
                 if (user == null){
-                    mDatabaseReference.child(emailSign).setValue(data)
+                    mDatabaseReference.child(mobileNumber).setValue(data)
+
+                    Toast.makeText(
+                        applicationContext, "yeay, akunmu berhasil terdaftar",
+                        Toast.LENGTH_LONG).show()
+
+                    var intent = Intent(this@SignupActivity, SigninActivity::class.java)
+                    startActivity(intent)
 
                 } else {
                     Toast.makeText(
-                        applicationContext, "User sudah digunakan",
+                        applicationContext, "No Hp sudah digunakan",
                         Toast.LENGTH_LONG).show()
                 }
             }

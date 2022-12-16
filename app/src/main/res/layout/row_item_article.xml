@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="380dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="15dp"
+    app:cardElevation="30dp"
+    app:cardCornerRadius="15dp"
+    android:clickable="true"
+    app:cardBackgroundColor="@color/darkBlue"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_item_appointment"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/hamil_merah"
+            android:id="@+id/foto"
+            android:layout_width="70dp"
+            android:layout_height="70dp"/>
+
+
+
+        <TextView
+            android:id="@+id/kategori"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Kandungan"
+            android:textColor="@color/blueMedium"
+            app:layout_constraintStart_toEndOf="@id/foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_marginStart="10dp"
+            android:textSize="16dp"
+            android:fontFamily="@font/inter_medium"
+            app:layout_constraintTop_toBottomOf="@id/kategori"
+            android:text="Simak Beragam Manfaat Rambutan untuk Ibu Hamil"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toEndOf="@id/foto"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_marginStart="10dp"
+            android:textSize="10dp"
+            android:fontFamily="@font/inter"
+            app:layout_constraintTop_toBottomOf="@id/judul"
+            android:text="Dr.Andi Pratama"
+            android:textColor="@color/blueMedium"
+            app:layout_constraintStart_toEndOf="@id/foto"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+
+
+
+</androidx.cardview.widget.CardView>

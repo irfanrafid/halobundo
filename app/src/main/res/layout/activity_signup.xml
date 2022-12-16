@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signup"
+    tools:context=".SignupActivity"
     android:background="@color/primaryBlue">
 
     <ImageView
@@ -174,8 +174,9 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="24dp"
         android:text="Lanjutkan"
-        android:background="@color/secondaryBlue"
-        android:textColor="@color/white"
+        android:background="@drawable/rectangle_120"
+        android:textSize="20dp"
+        android:fontFamily="@font/inter_medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

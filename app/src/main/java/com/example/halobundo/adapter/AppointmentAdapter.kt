@@ -49,4 +49,5 @@ class AppointmentAdapter(private var data: List<Appointment>,
     override fun getItemCount(): Int =data.size
 
 
+
 }
